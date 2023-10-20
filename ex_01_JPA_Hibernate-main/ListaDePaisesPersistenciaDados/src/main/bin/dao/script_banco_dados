@@ -1,0 +1,5 @@
+-- Cria o banco de dados "exemplo_banco"
+CREATE DATABASE exemplo_banco;
+
+-- Usa o banco de dados "exemplo_banco"
+USE exemplo_banco;

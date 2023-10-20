@@ -1,0 +1,5 @@
+-- Cria o banco de dados "exemplo_banco"
+	CREATE DATABASE aula_hibernate_02;
+
+-- Usa o banco de dados "exemplo_banco"
+USE aula_hibernate_02;
