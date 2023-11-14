@@ -10,11 +10,12 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Carro implements Serializable {
-	private static final long SerialVersionUID = 1;
+
+	private static final long serialVersionUID = 1L;
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id ;
+	private int id ;
 	private String marca;
 	private String nome;
 	private int ano ;
@@ -24,7 +25,7 @@ public class Carro implements Serializable {
 		
 	}
 	
-	public Carro(Long id, String marca, String nome, int ano, String cor) {
+	public Carro(int id, String marca, String nome, int ano, String cor) {
 		this.id = id;
 		this.marca = marca;
 		this.nome = nome;
@@ -64,7 +65,7 @@ public class Carro implements Serializable {
 		this.cor = cor;
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 	
@@ -88,7 +89,7 @@ public class Carro implements Serializable {
 
 	@Override
 	public String toString() {
-		return "carro [id=" + id + ", marca=" + marca + ", nome=" + nome + ", ano=" + ano + ", cor=" + cor + "]";
+		return "Carro [id=" + id + ", marca=" + marca + ", nome=" + nome + ", ano=" + ano + ", cor=" + cor + "]";
 	}
 	
 

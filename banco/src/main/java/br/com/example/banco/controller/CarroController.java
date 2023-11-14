@@ -27,7 +27,7 @@ public class CarroController {
 	}
 	
 	@GetMapping("/{id}")
-	public Carro busacaCarroPorId(@PathVariable Integer id) {
+	public Carro busacaCarroPorId(@PathVariable int id) {
 		return carroRepository.findById(id).orElse(null);	
 		}
 	@GetMapping("/nome/{nome}")
@@ -44,12 +44,12 @@ public class CarroController {
 	
 	//para att um objeto carro//
 	@PutMapping("/{id}")
-	public Carro atualizarCarro(@PathVariable Integer id, @RequestBody Carro carro) {
+	public Carro atualizarCarro(@PathVariable int id, @RequestBody Carro carro) {
 		return carroRepository.save(carro);
 	}	
 	//deletar um objeto carro//
 		@DeleteMapping("/{id}")
-		public void  detelarcarro(@PathVariable Integer id) {
+		public void  detelarcarro(@PathVariable int id) {
 			 carroRepository.deleteById(id);
 		
 		
